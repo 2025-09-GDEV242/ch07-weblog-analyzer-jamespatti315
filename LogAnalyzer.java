@@ -66,14 +66,30 @@ public class LogAnalyzer
      * this a constructor, assume @param needed of log file?
      */
     
-    public LogAnalyzer(String LogFileName){
+    public LogAnalyzer(String logEntry){
         
-       this.reader = new LogfileReader(LogFileName);
-        
-       // pass this to logfilereader? fuck it, think its good if not maybe book could explain more then FUCKING ZERO shit on how this code could work.
-       
+       hourCounts = new int[24];
+       reader = new LogfileReader(logEntry);
         
         
+    }
+    
+    /**
+     * here we will make a  method which gives us the number of accesses for a file
+     * we test it by opening a logfile with notepad++ and see number of lines in a file.
+     */
+    
+    public int numberofAccesses(){
+        int total = 0; //set it to 0 if no files/
+        //add amount in each element of hours  hoursCount to total
+        for(int i = 0; i < hourCounts.length; i++){
+            total += hourCounts[i];
+            
+        }
         
+    
+        
+        return total;
+    
     }
 }
