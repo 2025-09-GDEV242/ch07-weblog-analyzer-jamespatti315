@@ -67,9 +67,11 @@ public class LogAnalyzer
      */
     
     public LogAnalyzer(String LogFileName){
+        
        this.reader = new LogfileReader(LogFileName);
         
-       // pass this to logfilereader?
+       // pass this to logfilereader? fuck it, think its good if not maybe book could explain more then FUCKING ZERO shit on how this code could work.
+       
         
         
         
