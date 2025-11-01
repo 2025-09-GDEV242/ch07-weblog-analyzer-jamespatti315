@@ -3,7 +3,12 @@
  * 
  * @author David J. Barnes and Michael Kölling.
  * @version    2016.02.29
+ * 
+ * @Authoer worked on by James Patti
+ * due 11/3/25
+ * HAPPY HALLOWEEN!
  */
+ 
 public class LogAnalyzer
 {
     // Where to calculate the hourly access counts.
@@ -54,5 +59,19 @@ public class LogAnalyzer
     public void printData()
     {
         reader.printData();
+    }
+    
+    /**
+     * let make a method so it can take a string which is the name of the log file
+     * this a constructor, assume @param needed of log file?
+     */
+    
+    public LogAnalyzer(String LogFileName){
+       this.reader = new LogfileReader(LogFileName);
+        
+       // pass this to logfilereader?
+        
+        
+        
     }
 }
