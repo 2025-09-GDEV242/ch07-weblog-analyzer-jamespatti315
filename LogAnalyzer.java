@@ -92,4 +92,56 @@ public class LogAnalyzer
         return total;
     
     }
+    
+    /**
+     * now the busiesthour method, this take a for loop and finds which hour count is highest...and guess if zero or matching then 
+     * default to  a tie?
+     */
+    
+    public int busiestHour(){
+        
+        //reuse this code, now where iterating to find the largest hour
+        
+        int busiestHour = 0;   //so if first busiest then we good~
+        
+            
+            for (int x = 1; x < hourCounts.length; x++){
+                //now change variable to total
+                if(hourCounts[x]> hourCounts[busiestHour])
+                busiestHour = x;
+                
+                
+                }
+            //here if need can work on tiebreaker need new index to store multiple largest in hourCounts
+              //ehh it returns busiest hour, know issue if tie but tired, tired tired tired.
+        
+        
+        return busiestHour;
+    }
+    
+    
+    /**
+     * now same as first..but  quiest hour, literally just reuse the frick on this.
+     */
+    
+    public int quiestestHour(){
+        
+        //reuse this code, now where iterating to find the largest hour
+        
+        int  quiestestHour = 0;   //so if first busiest then we good~
+        
+            
+            for (int x = 1; x < hourCounts.length; x++){
+                //now change variable to total
+                if(hourCounts[x]< hourCounts[quiestestHour])
+                quiestestHour = x;
+                
+                
+                }
+            //here if need can work on tiebreaker need new index to store multiple largest in hourCounts
+              //ehh it returns busiest hour, know issue if tie but tired, tired tired tired.
+        
+        
+        return quiestestHour;
+    }
 }
