@@ -144,4 +144,24 @@ public class LogAnalyzer
         
         return quiestestHour;
     }
+    
+    /**
+     * the busiest two hour method nowm similer to above with now a wider ranger of up to two hours, such as 2-4 am, 8=10 pm etc.
+     */
+    
+    public int busiestTwoHours(){
+        int busyTwoHours =  hourCounts[0] + hourCounts[1];
+        int busiestStartHour = 0;
+        for(int i = 1; i < hourCounts.length-1; i++){
+            int twoHoursCount = hourCounts[i] + hourCounts[i+1];
+            if(twoHoursCount > busyTwoHours){
+                busyTwoHours = twoHoursCount;
+                busiestStartHour = i;
+                
+            }
+        }
+        
+        
+        return busyTwoHours-1;
+    }
 }
