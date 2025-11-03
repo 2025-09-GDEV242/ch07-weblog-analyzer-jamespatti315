@@ -164,4 +164,9 @@ public class LogAnalyzer
         
         return busyTwoHours-1;
     }
+    
+    /**
+     * here lets ponder making a quietest day method, which just aggregates
+     * the total and sees which log had least activity?
+     */
 }
